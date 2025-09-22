@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning the Image Tag - Debugging Exercise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .gallery {
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Tag Debugging Exercise - 30 Errors to Find</h1>
+    
+    <!-- 
+    ========================================
+    CORRECT IMG TAG SYNTAX:
+    <img src="path/to/image.jpg" alt="description">
+    
+    KEY POINTS:
+    - img is a SELF-CLOSING tag (no </img> needed)
+    - src attribute is REQUIRED (source/path of image)
+    - alt attribute is REQUIRED (alternative text)
+    - Common attributes: width, height, title
+    ========================================
+    -->
+    
+    <h2>Section 1: Basic Image Syntax</h2>
+    <div class="gallery">
+        
+        <!-- ERROR 1: img tag with closing tag (should be self-closing) -->
+        <img src="photo1.jpg" alt="First photo"></img>
+        
+        <!-- ERROR 2: Missing src attribute -->
+        <img alt="Beautiful sunset">
+        
+        <!-- ERROR 3: Missing alt attribute -->
+        <img src="photo2.jpg">
+        
+        <!-- ERROR 4: src without quotes -->
+        <img src=photo3.jpg alt="Third photo">
+        
+        <!-- ERROR 5: alt without quotes -->
+        <img src="photo4.jpg" alt=Fourth photo>
+        
+        <!-- ERROR 6: Using 'source' instead of 'src' -->
+        <img source="photo5.jpg" alt="Fifth photo">
+        
+        <!-- ERROR 7: Missing equals sign in attribute -->
+        <img src"photo6.jpg" alt="Sixth photo">
+        
+        <!-- ERROR 8: Space in attribute name -->
+        <img sr c="photo7.jpg" alt="Seventh photo">
+        
+    </div>
+    
+    <h2>Section 2: Image Paths and Extensions</h2>
+    <div class="gallery">
+        
+        <!-- ERROR 9: Missing file extension -->
+        <img src="photo8" alt="Eighth photo">
+        
+        <!-- ERROR 10: Wrong slash direction in path (Windows style) -->
+        <img src="images\photo9.jpg" alt="Ninth photo">
+        
+        <!-- ERROR 11: Space in filename without encoding -->
+        <img src="my photo.jpg" alt="My photo">
+        
+        <!-- ERROR 12: Capital IMG tag (inconsistent, but explaining case) -->
+        <IMG src="photo10.jpg" alt="Tenth photo">
+        
+        <!-- ERROR 13: Missing closing quote in src -->
+        <img src="photo11.jpg alt="Eleventh photo">
+        
+        <!-- ERROR 14: Missing opening quote in alt -->
+        <img src="photo12.jpg" alt=Twelfth photo">
+        
+        <!-- ERROR 15: Using single and double quotes mixed -->
+        <img src='photo13.jpg" alt="Thirteenth photo">
+        
+    </div>
+    
+    <h2>Section 3: Width and Height Attributes</h2>
+    <div class="gallery">
+        
+        <!-- ERROR 16: Width without quotes (this actually works but teaching consistency) -->
+        <img src="photo14.jpg" alt="Fourteenth photo" width=300>
+        
+        <!-- ERROR 17: Height with 'px' in attribute (shouldn't include unit) -->
+        <img src="photo15.jpg" alt="Fifteenth photo" height="200px">
+        
+        <!-- ERROR 18: Width with percentage sign in attribute -->
+        <img src="photo16.jpg" alt="Sixteenth photo" width="50%">
+        
+        <!-- ERROR 19: Misspelled 'width' -->
+        <img src="photo17.jpg" alt="Seventeenth photo" widht="400">
+        
+        <!-- ERROR 20: Using 'hight' instead of 'height' -->
+        <img src="photo18.jpg" alt="Eighteenth photo" width="300" hight="200">
+        
+    </div>
+    
+    <h2>Section 4: Common Attribute Mistakes</h2>
+    <div class="gallery">
+        
+        <!-- ERROR 21: Duplicate src attributes -->
+        <img src="photo19.jpg" src="photo20.jpg" alt="Duplicate source">
+        
+        <!-- ERROR 22: Empty src attribute -->
+        <img src="" alt="Empty source">
+        
+        <!-- ERROR 23: Empty alt attribute (this is actually valid but not best practice) -->
+        <img src="photo21.jpg" alt="">
+        
+        <!-- ERROR 24: Using 'title' instead of 'alt' (title is additional, not replacement) -->
+        <img src="photo22.jpg" title="Twenty-second photo">
+        
+        <!-- ERROR 25: Comma between attributes -->
+        <img src="photo23.jpg", alt="Twenty-third photo">
+        
+    </div>
+    
+    <h2>Section 5: Advanced Mistakes</h2>
+    <div class="gallery">
+        
+        <!-- ERROR 26: img tag not self-closed with /> (explaining XHTML vs HTML5) -->
+        <img src="photo24.jpg" alt="Twenty-fourth photo" />
+        <!-- Note: This is actually valid XHTML but not required in HTML5 -->
+        
+        <!-- ERROR 27: Missing the img tag name -->
+        < src="photo25.jpg" alt="Twenty-fifth photo">
+        
+        <!-- ERROR 28: Broken img tag opening -->
+        <im g src="photo26.jpg" alt="Twenty-sixth photo">
+        
+        <!-- ERROR 29: Using 'href' instead of 'src' (confusion with anchor tag) -->
+        <img href="photo27.jpg" alt="Twenty-seventh photo">
+        
+        <!-- ERROR 30: Nested img tag inside another img (invalid) -->
+        <img src="photo28.jpg" alt="Outer image">
+            <img src="photo29.jpg" alt="Inner image">
+        </img>
+        
+    </div>
+    
+    <h2>Test Your Knowledge</h2>
+    <p>Remember the key points:</p>
+    <ul>
+        <li>The img tag is self-closing (no closing tag needed)</li>
+        <li>src attribute is required (tells where the image is)</li>
+        <li>alt attribute is required (describes the image)</li>
+        <li>width and height are optional (no units in HTML attributes)</li>
+        <li>Always use quotes around attribute values</li>
+        <li>Check your file paths and extensions</li>
+    </ul>
+    
+</body>
+</html>
